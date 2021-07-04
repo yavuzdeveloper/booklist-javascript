@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
 // Event: Add a Book
 document.querySelector('#book-form').addEventListener('submit', (e) => {
+  
   // Prevent actual submit
   e.preventDefault();
 
@@ -104,6 +105,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   if(title === '' || author === '' || isbn === '') {
     UI.showAlert('Please fill in all fields', 'danger');
   } else {
+
     // Instatiate book
     const book = new Book(title, author, isbn);
 
